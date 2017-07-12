@@ -9,6 +9,7 @@ heart_clean<-drop_na(heart_clean)
 write.csv(heart_clean, "data/clean_data/heart_clean.csv")
 
 #split cohort in two: train and test
+set.seed(57)
 train <- sample(1:nrow(heart_clean), nrow(heart_clean)*0.7)
 test <- -train
 
